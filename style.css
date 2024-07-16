@@ -17,16 +17,17 @@ video, .img-tesla {
      height: 100%; /* ALTURA */
      position: absolute; /* POSICIONAR O ITEM NUMA POSIÇÃO EXATA QUE EU DESEJAR */
      top: 0;
-     left: 0;
+     left: 0; 
      z-index: -1; /* DEFINE QUEM FICA NA FRENTE DE QUEM */
      object-fit: cover;/* FAZ COM QUE O VIDEO CUBRA TODA A TELA  */
      filter: brightness(60%);
 }
  
 .logo {
-    filter: brightness(100);
+    filter: brightness(300);
     position: fixed;
-    width: 120px;
+    width: 800px;
+    
 }
 
 .item {
@@ -80,11 +81,12 @@ button {
 }
 
 .formulario {
-    position: fixed;
-    top: 50px;
-    width: 500px;
-    height: 80%;
+    position: absolute;
+    top: 20px;
+    width: 400px;
+    height: 100%;
     z-index: 3;
-    left: -50%;
+    left: -40%;
     transition: 1.5s;
+    overflow: auto;
 }

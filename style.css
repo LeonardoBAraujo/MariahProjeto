@@ -16,10 +16,10 @@ video, .img-tesla {
      width: 100%; /* LARGURA */
      height: 100%; /* ALTURA */
      position: absolute; /* POSICIONAR O ITEM NUMA POSIÇÃO EXATA QUE EU DESEJAR */
-     top: 0;
+     top: 40;
      left: 0; 
      z-index: -1; /* DEFINE QUEM FICA NA FRENTE DE QUEM */
-     object-fit: cover;/* FAZ COM QUE O VIDEO CUBRA TODA A TELA  */
+     object-fit: fill;/* FAZ COM QUE O VIDEO CUBRA TODA A TELA  */
      filter: brightness(60%);
 }
  
@@ -52,7 +52,7 @@ h1 {
 }
 
 .info-carro {
-    margin-top: 80px;
+    margin-top: 200px;
     text-align: center;
 }
 
@@ -67,11 +67,15 @@ button {
     border-radius: 5px; /* ARREDONDA A BORDA DO BOTÃO */
     border: none; /* TIRA A BORDA DO BOTÃO */
     cursor: pointer; /* COLOCA A MÃOSINHA NO LUGAR DO MOUSE */
+    
 }
 
-.test-drive {
+#curtir {
     color: black;
-    background-color: white;
+    background-color: white;/*Cor inicial*/
+}
+#curtir.clicked {
+    background-color: blue; /* Cor após o clique */
 }
 
 .texto-rodape {

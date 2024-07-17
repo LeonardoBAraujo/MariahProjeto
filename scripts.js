@@ -10,3 +10,12 @@ function aparecerFormulario(){
 function desaparecerFormulario(){
     formulario.style.left = "-50%"
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const button = document.getElementById('curtir');
+
+    button.addEventListener('click', () => {
+        button.classList.add('clicked');
+    });
+});
+

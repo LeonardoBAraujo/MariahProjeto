@@ -36,7 +36,6 @@ video, .img-tesla {
 
     justify-content: space-between; /* CRIA UM ESPAÇAMENTO ENTRE OS ITENS */
     flex-direction: column; /* DEIXAR UM ITEM DEBAIXO DO OUTRO */
-
     position: relative;
     height: 100vh; /* TELA TODA - ALTURA */
     width: 50vw; /* TELA TODA - LARGURA */
@@ -92,7 +91,7 @@ button {
     height: 100%;
     z-index: 3;
     left: -40%;
-    transition: 1.5s;
+    transition: 0.5s;
     overflow: auto;
 }
 body,html {

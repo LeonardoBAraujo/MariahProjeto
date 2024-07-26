@@ -2,45 +2,73 @@
 
 * {
     font-family: "Poppins", sans-serif;
-    margin: 0; /* espaçamento externo */
-    padding: 0; /* espaçamento interno */
-    box-sizing: border-box; 
+    margin: 0;
+    /* espaçamento externo */
+    padding: 0;
+    /* espaçamento interno */
+    box-sizing: border-box;
 }
+
 /* * asterísco significa TUDO, ele vai aplicar esse estilo para tudo */
 
 html {
     scroll-snap-type: y mandatory;
 }
 
-video, .img-tesla {
-     width: 100%; /* LARGURA */
-     height: 100%; /* ALTURA */
-     position: absolute; /* POSICIONAR O ITEM NUMA POSIÇÃO EXATA QUE EU DESEJAR */
-     top: 40;
-     left: 0; 
-     z-index: -1; /* DEFINE QUEM FICA NA FRENTE DE QUEM */
-     object-fit: fill;/* FAZ COM QUE O VIDEO CUBRA TODA A TELA  */
-     filter: brightness(60%);
-}
- 
-.logo {
-    filter: brightness(300);
-    position: fixed;
-    width: 1350px;
+video {
+    width: 100%;
+    /* LARGURA */
     height: 100%;
-    
+    /* ALTURA */
+    position: absolute;
+    /* POSICIONAR O ITEM NUMA POSIÇÃO EXATA QUE EU DESEJAR */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* DEFINE QUEM FICA NA FRENTE DE QUEM */
+    object-fit: fill;
+    /* FAZ COM QUE O VIDEO CUBRA TODA A TELA  */
+    filter: brightness(60%);
 }
 
-.item {
-    display: flex; /* HABILITA ALGUMAS PROPRIEDADES CSS */
-
-    justify-content: space-between; /* CRIA UM ESPAÇAMENTO ENTRE OS ITENS */
-    flex-direction: column; /* DEIXAR UM ITEM DEBAIXO DO OUTRO */
-    position: relative;
-    height: 100vh; /* TELA TODA - ALTURA */
-    width: 50vw; /* TELA TODA - LARGURA */
-    scroll-snap-align: start;
+header {
+    background-color: rgb(56, 18, 126);
+    padding: 10px 0;
 }
+
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+ul.navlist li {
+    display: inline;
+
+}
+
+ul.navlist li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 50px;
+}
+
+ul.navlist li a :hover {
+    background-color: rgb(182, 144, 18);
+    border-radius: 5px;
+}
+
+.logo {
+    max-width: 90px;
+    margin: 40 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10 20px;
+}
+
+
 
 h1 {
     color: white;
@@ -51,76 +79,41 @@ h1 {
     color: white;
 }
 
-.info-carro {
+.text-home {
     margin-top: 200px;
     text-align: center;
 }
 
 .rodape {
-    text-align: center; /* ALINHA MEU ITEM AO CENTRO */
+    text-align: center;
+    /* ALINHA MEU ITEM AO CENTRO */
 }
 
-button {
-    background-color: rgba(34, 34, 34, 0.8);
-    color: white;
-    padding: 7px 80px;
-    border-radius: 5px; /* ARREDONDA A BORDA DO BOTÃO */
-    border: none; /* TIRA A BORDA DO BOTÃO */
-    cursor: pointer; /* COLOCA A MÃOSINHA NO LUGAR DO MOUSE */
-    
-}
 
 #curtir {
     color: black;
-    background-color: white;/*Cor inicial*/
+    background-color: white;
+    /*Cor inicial*/
 }
+
 #curtir.clicked {
-    background-color: blue; /* Cor após o clique */
+    background-color: blue;
+    /* Cor após o clique */
 }
 
 .texto-rodape {
     color: white;
-    font-size: 12px; /* TAMANHO DO TEXTO */
+    font-size: 12px;
+    /* TAMANHO DO TEXTO */
     margin-top: 10px;
 }
 
-.formulario {
-    position: absolute;
-    top: 20px;
-    width: 400px;
-    height: 100%;
-    z-index: 3;
-    left: -40%;
-    transition: 0.5s;
-    overflow: auto;
-}
-body,html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.logo-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 120vh;
+    /* Full viewport height */
 
-.container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas */
-    width: 100vw;
-    height: 100vh;
-}
 
-.image-box {
-    flex: 1 1 50%; /* Ajusta o tamanho de cada caixa de imagem */
-    max-width: 50%;
-    max-height: 50%;
-    box-sizing: border-box;
-    padding: 5px;
-}
 
-.image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz a imagem cobrir a caixa sem distorcer */
 }

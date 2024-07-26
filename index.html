@@ -1,57 +1,55 @@
-<!DOCTYPE html> <!-- VERSÃO DO HTML -->
-<html lang="pt-br"> <!-- TAG HTML E LINGUA DO SITE -->
+<!DOCTYPE html>
+<!-- VERSÃO DO HTML -->
+<html lang="pt-br">
+  <!-- TAG HTML E LINGUA DO SITE -->
 
-<head> <!-- CONFIGURAÇÕES DO SITE -->
-    <meta charset="UTF-8"> <!-- PADRÃO DE CARACTERES DO SITE -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- CONFIGURAÇÕES DO SITE -->
+    <meta charset="UTF-8" />
+    <!-- PADRÃO DE CARACTERES DO SITE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SITE COMPATÍVEL COM CELULAR E COMPUTADOR -->
-    <link rel="stylesheet" href="style.css"> <!-- IMPORTANDO MEU ARQUIVO CSS -->
-    <title>Projeto Leo</title> <!-- TITULO DO SITE -->
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <!-- IMPORTANDO MEU ARQUIVO CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Recordações Mariah</title>
+    <!-- TITULO DO SITE -->
+  </head>
 
-<body>
-    <img src="./img/logoMariah.png" alt=" Mariah " class="logo">
+  <body>
+    <header>
+      <img src="./img/logo.png" alt=" Mariah " class="logo" />
+      <nav>
+        <ul class="navlist">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fotos.html">Fotos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="https://www.instagram.com/mariahcarneiro7?igsh=dG03OTV4NGhyNnU5" target="_blank">
+            <i class="fab fa-instagram">Instagram</i></a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <ul class="inicial">
-        <!-- ITEM 1 -->
-        <li class="item">
-            <video src="./img/videoMariah1.mp4" muted loop autoplay></video>
-           
-            <div class="info-carro">
-                <h1>Meu tour pela Europa</h1> <!-- TITULO -->
-                <p class="sub-titulo">Curta essas belas imagens</p>
-            </div>
-            
-            <div class="rodape">
-                <button onclick="aparecerFormulario()">Deixar uma mensagem</button>
-                <button id="curtir">Curtir Álbum</button>
-                <p class="texto-rodape"> Me siga no instagram e veja mais fotos
-                    <a href="https://www.instagram.com/mariahcarneiro7?igsh=dG03OTV4NGhyNnU5" target="_blank">
-                        <button id="seguir">Seguir</button></a></p>
-            </div>
-        </li>
-    </ul>
-    <div class="container">
-        <!-- ITEM 2 -->
-        <div class="item">
-            <img src="./img/mariah.jpg" class="img-tesla" alt="mariah"> 
-            <div class="info-carro">
-                <h1>Modelando</h1> <!-- TITULO -->
-                <p class="sub-titulo">Vamos em frente</p>
-            </div>
+    <!-- HOME -->
+    <ul class="home" id="Inicio">
+      <video src="./img/videoMariah1.mp4" muted loop autoplay></video>
 
-        </div>
-        <!-- ITEM 3 -->
+      <div class="text-home">
+        <h1>Meu tour pela Europa</h1>
+        <!-- TITULO -->
+        <p class="sub-titulo">Curta essas belas imagens</p>
+      </div>
+
+      <div class="rodape">
+        <button id="curtir">Curtir Álbum</button>
+        <p class="texto-rodape">
+          Me siga no instagram e veja mais fotos
          
-        <div class="item">
-            <img src="./img/foto1.jpg" class="img-tesla" alt="imagem model x">
-        </div>
-    </div>
-    <div class="formulario">
-        <button onclick="desaparecerFormulario()">Fechar</button>
-        <script type="text/javascript" src="https://form.jotform.com/jsform/241966230699064"></script>
-    </div>
-</body>
-<script src="scripts.js"></script>
-
-</html> 
+            <button id="seguir">Seguir</button></a
+          >
+        </p>
+      </div>
+    </ul>
+  </body>
+  <script src="scripts.js"></script>
+</html>

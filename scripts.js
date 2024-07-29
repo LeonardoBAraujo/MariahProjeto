@@ -1,34 +1,22 @@
-// document = ir no HTML
-// querySelector = busca o que eu quiser que ele busque
+document.addEventListener('DOMContentLoaded', function() {
+    const photos = document.querySelectorAll('.photo');
+    let currentIndex = 0;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const album = document.querySelector('.album');
-    let currentPage = 0;
-    
-    window.addEventListener('wheel', (event) => {
-        if (event.deltaY > 0) {
-            nextPage();
-        } else {
-            previousPage();
-        }
+    function showPhoto(index) {
+        photos.forEach((photo, i) => {
+            photo.classList.toggle('active', i === index);
+        });
+    }
+
+    document.getElementById('prev').addEventListener('click', function() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : photos.length - 1;
+        showPhoto(currentIndex);
     });
 
-    function nextPage() {
-        if (currentPage < album.children.length - 1) {
-            currentPage++;
-            updateAlbum();
-        }
-    }
+    document.getElementById('next').addEventListener('click', function() {
+        currentIndex = (currentIndex < photos.length - 1) ? currentIndex + 1 : 0;
+        showPhoto(currentIndex);
+    });
 
-    function previousPage() {
-        if (currentPage > 0) {
-            currentPage--;
-            updateAlbum();
-        }
-    }
-
-    function updateAlbum() {
-        const height = album.children[0].clientHeight + 20; // Adding margin
-        album.style.transform = `translateY(${-currentPage * height}px)`;
-    }
+    showPhoto(currentIndex);
 });

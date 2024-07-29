@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -8,8 +6,6 @@
     /* espaçamento interno */
     box-sizing: border-box;
 }
-
-/* * asterísco significa TUDO, ele vai aplicar esse estilo para tudo */
 
 html {
     scroll-snap-type: y mandatory;
@@ -31,10 +27,27 @@ video {
     filter: brightness(60%);
 }
 
+.PlanoDeFundoAlbum {
+    width: 100%;
+    height: 128%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: fill;
+    filter: brightness(60%);
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
     background-color: rgb(56, 18, 126);
-    padding: 10px 0;
-    
 }
 
 nav {
@@ -69,8 +82,6 @@ ul.navlist li a :hover {
     padding: 10 20px;
 }
 
-
-
 h1 {
     color: white;
     font-size: 50px;
@@ -90,7 +101,6 @@ h1 {
     /* ALINHA MEU ITEM AO CENTRO */
 }
 
-
 .texto-rodape {
     color: white;
     font-size: 12px;
@@ -102,23 +112,63 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 120vh;
-    /* Full viewport height */
-
-
 
 }
+
 .album {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    transition: transform 0.5s ease;
+    width: 50%;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    height: 100%;
 }
 
-.album img {
+.photos {
+    position: relative;
+
+}
+
+.photo {
+    display: none;
     width: 100%;
-    max-width: 650px;
-    height: auto;
-    margin: 10px 0;
+}
+
+.photo.active {
+    display: block;
+}
+
+.controls {
+    position: relative;
+    top: 50%;
+    transform: translateY(-1300%);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#prev {
+    left: 1px;
+}
+
+#next {
+    right: 10px;
+}
+
+.controls button {
+
+    padding: 5px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
     border-radius: 5px;
+}
+
+.controls button:hover {
+    background-color: purple;
+
 }
